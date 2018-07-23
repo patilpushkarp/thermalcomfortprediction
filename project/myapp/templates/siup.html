@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Thermal Comfort</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+.jumbotron{
+  background-color: #000000;
+  color: #ffffff;
+}
+
+</style>
+<body>
+
+<div class="jumbotron">
+  <h2>Please provide the following information</h2>
+</div>
+<div>
+ <form class="form-horizontal" action="/reg" method="POST">{% csrf_token %}
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="username">Username:</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" id="username" name="username">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="password">Password:</label>
+    <div class="col-sm-7">
+      <input type="password" class="form-control" id="password" name="password">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Name:</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Email:</label>
+    <div class="col-sm-7">
+      <input type="email" class="form-control" id="email" name="email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Age:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="age" name="age" min="1">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="pwd">Gender:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="gender" name="gender" min="0" max="1">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Average temperature at 0.6m above floor:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="ta_m" name="ta_m" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Average velocity of air at 0.6m above floor:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="va_m" name="va_m" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group text-center">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+  </form> 
+</div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Light Control</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta http-equiv="refresh" content="20">
+</head>
+<style>
+  .jumbotron{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .therm{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .light{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+</style>
+<body>
+
+<div class="jumbotron">
+  <h1>Welcome to your Dashboard</h1>
+  <form action="/logout" method="POST">
+    <button type="submit" class="btn btn-default">Logout</button>
+  </form>
+</div>
+
+You are : <strong>{{username}}</strong>
+
+<div>
+<ul class="nav nav-tabs nav-justified">
+    <li class="nav-item">
+      <a class="nav-link" href="#thermal">Thermal Comfort</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#lights">Lights</a>
+    </li>
+</ul>
+</div>
+
+<div class="container therm" id="thermal">
+  <h3>Thermal Controlling Parameters</h3>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th>Parameter</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Age</td>
+        <td>{{age}}</td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>{{gender}}</td>
+      </tr>
+      <tr>
+        <td>Temperature</td>
+        <td>{{taav}}</td>
+      </tr>
+      <tr>
+        <td>Humidty</td>
+        <td>{{rh}}</td>
+      </tr>
+      <tr>
+        <td>Mean Radiant Temperature</td>
+        <td>{{ta_m}}</td>
+      </tr>
+      <tr>
+        <td>Mean Velocity of Air</td>
+        <td>{{va_m}}</td>
+      </tr>
+      <tr>
+        <td>Average Temperature</td>
+        <td>{{trav}}</td>
+      </tr>
+      <tr>
+        <td>Average Velocity</td>
+        <td>{{velav}}</td>
+      </tr>
+      <tr>
+        <td>Metabolic activity</td>
+        <td>{{met}}</td>
+      </tr>
+      <tr>
+        <td>Clothing insulation</td>
+        <td>{{clo}}</td>
+      </tr>
+      <tr>
+        <td>Temperature at 3pm</td>
+        <td>{{da15_ta}}</td>
+      </tr>
+      <tr>
+        <td>Temperature at 6am</td>
+        <td>{{da6_ta}}</td>
+      </tr>
+      <tr>
+        <td>Outside average temperature</td>
+        <td>{{daav_ta}}</td>
+      </tr>
+      <tr>
+        <td>Humidity at 3pm</td>
+        <td>{{da15_rh}}</td>
+      </tr>
+      <tr>
+        <td>Humidity at 6am</td>
+        <td>{{da6_rh}}</td>
+      </tr>
+      <tr>
+        <td>Outside average humidity</td>
+        <td>{{daav_rh}}</td>
+      </tr>
+      <tr>
+        <td>Comfrot Level</td>
+        <td>{{con}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container light" id="lights">
+  <h3>Lighting Control</h3>
+  <form action="/but1" method="POST">
+    <button type="submit" class="btn btn-default">Lights on</button>
+  </form>
+  <br>
+  <form action="/but0" method="POST">
+    <button type="submit" class="btn btn-default">Lights off</button>
+  </form>
+</div>
+
+</body>
+</html>

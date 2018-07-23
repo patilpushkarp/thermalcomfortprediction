@@ -1,0 +1,241 @@
+username = forms.CharField(max_length=50, required=True)
+   email = forms.EmailField(required=True)
+   name = forms.CharField(max_length=50, required=True)
+   password = forms.CharField(widget = forms.PasswordInput())
+   age = forms.IntegerField(required=True)
+   gender = forms.IntegerField(required=True)
+   ta_m = forms.FloatField(required=True)
+   va_m = forms.FloatField(required=True)
+   trav = forms.FloatField(required=True)
+   velav = forms.FloatField(required=True)
+   met = forms.FloatField(required=True)
+   clo = forms.FloatField(required=True)
+   da15_ta = forms.FloatField(required=True)
+   da6_ta = forms.FloatField(required=True)
+   daav_ta = forms.FloatField(required=True)
+   da15_rh = forms.FloatField(required=True)
+   da6_rh = forms.FloatField(required=True)
+   daav_rh = forms.FloatField(required=True)
+
+
+
+
+
+username = proj.cleaned_data['username']
+   password1 = proj.cleaned_data['password']
+   password2 = proj.cleaned_data['password']
+   name = proj.cleaned_data['name']
+   email = proj.cleaned_data['email']
+   age = proj.cleaned_data['age']
+   gender = proj.cleaned_data['gender']
+   ta_m = proj.cleaned_data['gender']
+   va_m = proj.cleaned_data['va_m']
+   trav = proj.cleaned_data['trav']
+   velav = proj.cleaned_data['velav']
+   met = proj.cleaned_data['met']
+   clo = proj.cleaned_data['clo']
+   da15_ta = proj.cleaned_data['da15_ta']
+   da6_ta = proj.cleaned_data['da6_ta']
+   daav_ta = proj.cleaned_data['daav_ta']
+   da15_rh = proj.cleaned_data['da15_rh']
+   da6_rh = proj.cleaned_data['ad6_rh']
+   daav_rh = proj.cleaned_data['daav_rh']
+
+
+
+
+myapp_Profiles = Profiles(username="Pushkar", password="abc", name="a", email="a@b.com", age="23", gender="0", ta_m="89", va_m="67", trav="34", velav="23", met="89", clo="70", da15_ta="78", da6_ta="78", daav_ta="78", da15_rh="78", da6_rh="78", daav_rh="45")
+   myapp_Profiles.save()
+
+
+
+    name = models.CharField(max_length=50, null=True)
+    username = models.CharField(max_length=50, null=True)
+    password = models.CharField(max_length=50, null=True)
+    age = models.IntegerField()
+    gender = models.IntegerField()
+    ta_m = models.FloatField()
+    va_m = models.FloatField()
+    trav = models.FloatField()
+    velav = models.FloatField()
+    met = models.FloatField()
+    clo = models.FloatField()
+    da15_ta = models.FloatField()
+    da6_ta = models.FloatField()
+    daav_ta = models.FloatField()
+    da15_rh = models.FloatField()
+    da6_rh = models.FloatField()
+    daav_rh = models.FloatField()
+
+
+ ('username', 'email', 'name', 'password', 'age', 'gender', 'ta_m', 'va_m', 'trav', 'velav', 'met', 'clo', 'da15_ta', 'da6_ta', 'daav_ta', 'da15_rh', 'da6_rh', 'daav_rh')
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Email:</label>
+    <div class="col-sm-7">
+      <input type="email" class="form-control" id="email" name="email">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Name:</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Username:</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Password:</label>
+    <div class="col-sm-7">
+      <input type="password" class="form-control" id="password" name="password">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Age:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="age" name="age" min="1">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="pwd">Gender:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="gender" name="gender" min="0" max="1">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Average temperature at 0.6m above floor:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="ta_m" name="ta_m" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Average velocity of air at 0.6m above floor:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="va_m" name="va_m" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Average radiant temperature:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="trav" name="trav" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Average velocity of air:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="velav" name="velav" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Average Metabolic Rate:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="met" name="met" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Clothing Insulation:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="clo" name="clo" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Outdoor 3pm Temperture:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="da15_ta" name="da6_ta" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Outdoor 6am Temperture:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="da6_ta" name="da6_ta" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Outdoor Average Temperture:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="daav_ta" name="daav_ta" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Outdoor 3pm Relative Humidity:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="da15_rh" name="da15_rh" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Outdoor 6am Relative Humidity:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="da6_rh" name="da6_rh" step="0.01" min="0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Outdoor Average Relative Humidity:</label>
+    <div class="col-sm-7">
+      <input type="number" class="form-control" id="daav_rh" name="daav_rh" step="0.01" min="0">
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+ <form class="form-horizontal" action="/reg" method="POST">{% csrf_token %}
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Name:</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Email:</label>
+    <div class="col-sm-7">
+      <input type="email" class="form-control" id="email" name="email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Username:</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-5" for="email">Password:</label>
+    <div class="col-sm-7">
+      <input type="password" class="form-control" id="password" name="password">
+    </div>
+  </div>
+  <div class="form-group text-center">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+  </form> 
+
+
+
+
+
+class Profiles(models.Model):
+    name = models.CharField(max_length=50, null=True)
+    email = models.EmailField(null=True)
+    username = models.CharField(max_length=50, null=True)
+    password = models.CharField(max_length=50, default='admin')
+
+
+
+
+
+  class Meta:
+      model = Profiles
+      fields = ('name', 'email', 'username', 'password')
